@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>認証コード受け取り</title>
+</head>
+<body>
+<h1>認証コード</h1>
+<p>以下のコードをコピーしてスクリプトに貼り付けてください。</p>
+<pre id="code" style="font-size:18px; background:#eee; padding:10px;"></pre>
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById('code').textContent = params.get('code') || '(コードが見つかりません)';
+</script>
+</body>
+</html>
